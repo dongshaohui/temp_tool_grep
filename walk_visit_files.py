@@ -34,7 +34,7 @@ def multi_threading_grep_enter(pieces):
 		grep_t.start()
 
 if __name__ == '__main__':
-	search_all_folder_files("/home/dong/Code")
+	search_all_folder_files(sys.argv[3])
 	file_list_length = len(all_file_list)
 	file_l = file_list_length / (int)(sys.argv[1])
 	grep_context = sys.argv[2]
