@@ -21,7 +21,7 @@ def grep_action(arg):
 	import commands
 	grep_file_list = sp_list_c[arg]
 	for filename in grep_file_list:
-		cmd_str = "grep -nb %s %s" % (grep_context,filename)
+		cmd_str = "grep -nb "%s" %s" % (grep_context,filename)
 		os_result = commands.getoutput(cmd_str)
 		if len(os_result) > 0 :
 			print "file name %s " % filename
@@ -39,7 +39,6 @@ if __name__ == '__main__':
 	file_l = file_list_length / (int)(sys.argv[1])
 	grep_context = sys.argv[2]
 	sp_list_c = splist(all_file_list,file_l)
-	# print sp_list_c
 	multi_threading_grep_enter((int)(sys.argv[1]))
 	
 	
